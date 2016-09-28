@@ -63,7 +63,7 @@ $name = 'David Teutli';
 // $department = $_POST['department'];
 $department = 'Department';
 // $ut_eid = $_POST['ut_eid'];
-$ut_eid = 0123456789;
+$ut_eid = '0123456789';
 // $job_title = $_POST['job_title'];
 $job_title = 'El Jefe';
 // $PI = $_POST['PI'];
@@ -124,7 +124,7 @@ $pdf->Cell(7,10,'',0);
 $pdf->Cell(9,10,array_sum($days[0]),0);
 
 
-/**** Week 2 ****
+//**** Week 2 ****
 $pdf->Cell(40,10,'',0);
 for ($i=0; $i < 5; $i++) {
 	if(!isset($days[1])){
@@ -132,21 +132,21 @@ for ($i=0; $i < 5; $i++) {
 	}
   $pdf->Cell(9,10,$days[1][$i],0);
 }
-$pdf->Cell(9,10,'',0);
+$pdf->Cell(7,10,'',0);
 $pdf->Cell(9,10,array_sum($days[1]),0);
 
 // **** Weekly Totals Week 1 & 2 ****
 $pdf->Cell(0,15,'',0,1);
-$pdf->Cell(80,10,'',0);
+$pdf->Cell(82,10,'',0);
 $pdf->Cell(9,10,array_sum($days[0]),0);
-$pdf->Cell(93,10,'',0);
+$pdf->Cell(92,10,'',0);
 $pdf->Cell(9,10,array_sum($days[1]),0,1);
 
 // 2nd row
 $pdf->Cell(0,5,'',0,1);
 $pdf->Cell(28,10,'',0);
 $pdf->Cell(60,10,$timeperiod[2],0);
-$pdf->Cell(42,10,'',0);
+$pdf->Cell(40,10,'',0);
 $pdf->Cell(60,10,$timeperiod[3],0,1);
 
 // **** Week 3 ****
@@ -169,20 +169,15 @@ for ($i=0; $i < 5; $i++) {
 	}
   $pdf->Cell(9,10,$days[3][$i],0);
 }
-$pdf->Cell(9,10,'',0);
+$pdf->Cell(7,10,'',0);
 $pdf->Cell(9,10,array_sum($days[3]),0);
 
 // **** Weekly Totals Week 3 & 4 ****
 $pdf->Cell(0,15,'',0,1);
-$pdf->Cell(80,10,'',0);
+$pdf->Cell(82,10,'',0);
 $pdf->Cell(9,10,array_sum($days[2]),0);
 $pdf->Cell(93,10,'',0);
-<<<<<<< HEAD
 $pdf->Cell(9,10,array_sum($days[3]),0,1);
 
-=======
-$pdf->Cell(9,10,array_sum($days[1]),0,1);
-*/
->>>>>>> upstream/master
 $pdf->Output();
 ?>
